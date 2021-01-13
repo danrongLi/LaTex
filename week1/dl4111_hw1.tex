@@ -1,0 +1,770 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{url}
+\usepackage[demo]{graphicx}
+\usepackage{caption} 
+\usepackage{algpseudocode}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=blue]{hyperref}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+\DeclareMathOperator*{\R}{\mathbb{E}}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\newcommand{\homework}[2]{
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{
+				\hbox to 6.50in { {\bf NYU Computer Science Bridge to Tandon Course} \hfill Winter 2021 }
+				\vspace{4mm}
+				\hbox to 6.50in { {\Large \hfill Homework #1  \hfill} }
+				\vspace{2mm}
+				\hbox to 6.50in { {Name: Danrong Li \hfill} NetID: dl4111}
+
+			}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+
+\begin{document}
+	
+	\homework{1}{Danrong Li}
+	\section*{Question 1}
+	\textbf{A.} Convert the following numbers to their decimal representation. Show your work.
+	\medskip
+	
+	1. $10011011_2$ = $2^7+2^4+2^3+2^1+2^0$ = \textbf{155}
+	
+	2. $456_7$ = $4*7^2+5*7^1+6*7^0$ = \textbf{237}
+	
+	3. $38{\rm A}_{16}$ = $3*16^2+8*16^1+10*16^0$ = \textbf{906}
+	
+	4. $2214_5$ = $2*5^3+2*5^2+1*5^1+4*5^0$ = \textbf{309}
+
+	\vspace{3mm}
+	\textbf{B.} Convert the following numbers to their binary representation:
+	\medskip
+	
+	1. $69_{10}$ = $64+4+1$ = $2^6+2^2+2^0$ = $\mathbf{(1000101)_2}$
+	
+	2. $485_{10}$ = $256+128+64+32+4+1$ = $2^8+2^7+2^6+2^5+2^2+2^0$ = $\mathbf{(111100101)_2}$
+	
+	3. From the Hex Digit and 4 bit binary Conversion Table:
+	
+	\hspace{4mm} 6 = 0110; D = 1101; 1 = 0001; A = 1010; 
+	
+	\hspace{4mm} Thus,
+	$6{\rm D}1{\rm A}_{16}$ = $\mathbf{(0110110100011010)_2}$
+	
+	\vspace{3mm}
+	\textbf{C.} Convert the following numbers to their hexadecimal representation:
+	\medskip
+	
+	1. From the Hex Digit and 4 bit binary Conversion Table:
+	
+	\hspace{4mm} 6 = 0110; B = 1011; 
+	
+	\hspace{4mm} Thus,
+	$1101011_2$ = $\mathbf{(6\rm \mathbf{B)_{16}}}$
+	
+	2. $895_{10}$ = $256*3+16*7+1*15$ = $16^2*3+16^1*7+16^0*15$ = $\mathbf{(37\rm \mathbf{F)_{16}}}$
+	
+	\newpage
+	\section*{Question 2}
+    Solve the following, do all calculation in the given base. Show your work.
+	\medskip
+	
+	1. $7566_8+4515_8$ = $\mathbf{(14303)_8}$
+	
+	Work process: 
+	\vspace{30mm}
+
+	2. $10110011_2+1101_2$ = $\mathbf{(11000000)_2}$
+	
+	Work process: 
+	\vspace{30mm}	
+
+	3. $7{\rm A}66_{16}+45{\rm C}5_{16}$ = $\mathbf{(C02\rm \mathbf{B)_{16}}}$
+
+	Work process: 
+	\vspace{30mm}
+	
+	4. $3022_5-2433_5$ = $\mathbf{(34)_5}$
+	
+	Work process: 
+	\vspace{30mm}
+	
+	\newpage
+	\section*{Question 3}
+	\textbf{A.} Convert the following numbers to their 8-bits two's complement representation. Show your work.
+	\medskip
+	
+	1. $124_{10}$ = $64+32+16+8+4$ = $2^6+2^5+2^4+2^3+2^2$ = $(1111100)_2$ =  $\mathbf{01111100_{\rm \mathbf{8\ bit\ 2's\ comp}}}$
+	
+	2. $-124_{10}$ = $\mathbf{10000100_{\rm \mathbf{8\ bit\ 2's\ comp}}}$
+
+	Work process: 
+	\vspace{30mm}
+	
+	3. $109_{10}$ = $64+32+8+4+1$ = $2^6+2^5+2^3+2^2+2^0$ = $(1101101)_2$ = $\mathbf{01101101_{\rm \mathbf{8\ bit\ 2's\ comp}}}$
+
+	
+	4. $-79_{10}$ = $\mathbf{10110001_{\rm \mathbf{8\ bit\ 2's\ comp}}}$
+
+	Work process: 
+	
+	$79_{10}$ = $64+8+4+2+1$ = $2^6+2^3+2^2+2^1+2^0$ = $(1001111)_2$ = $01001111_{\rm 8\ bit\ 2's\ comp}$
+	\vspace{25mm}
+
+	\vspace{3mm}
+	\textbf{B.} Convert the following numbers (represented as 8-bit two's complement) to their decimal representation. Show your work.
+	\medskip
+	
+	1. $00011110_{\rm 8\ bit\ 2's\ comp}$ = $2^4+2^3+2^2+2^1$ = $\mathbf{30}$
+	
+	2. $11100110_{\rm 8\ bit\ 2's\ comp}$ = $\mathbf{-26}$
+	
+	Work process:
+	\vspace{25mm}
+	
+	$2^4+2^3+2^1$ = $26$\hspace{3mm}
+	Thus, $11100110_{\rm 8\ bit\ 2's\ comp}$ = $\mathbf{-26}$
+	
+	3. $00101101_{\rm 8\ bit\ 2's\ comp}$ = $2^5+2^3+2^2+2^0$ = $\mathbf{45}$
+	
+	4. $10011110_{\rm 8\ bit\ 2's\ comp}$ = $\mathbf{-98}$
+	
+	Work process: (next page)
+	
+	Work process:
+	\vspace{30mm}
+	
+	$2^6+2^5+2^1$ = $98$\hspace{3mm}
+	Thus, $10011110_{\rm 8\ bit\ 2's\ comp}$ = $\mathbf{-98}$
+	
+	\newpage
+	\section*{Question 4}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.2.4, section b,c
+	\medskip
+	
+	b. 
+	\begin{center}
+    \begin{tabular}{||c c c||} 
+    \hline
+    p & q &$ \neg (p\vee q)$ \\ [0.5ex] 
+    \hline\hline
+    T & T & F \\ 
+    \hline
+    T & F & F \\
+    \hline
+    F & T & F \\
+    \hline
+    F & F & T \\
+    \hline
+    \end{tabular}
+    \end{center}
+    
+    c. 
+	\begin{center}
+    \begin{tabular}{||c c c c||} 
+    \hline
+    p & q & r & $r \vee (p\wedge \neg q)$ \\ [0.5ex] 
+    \hline\hline
+    T & T & T & T \\ 
+    \hline
+    T & T & F & F \\
+    \hline
+    T & F & T & T \\
+    \hline
+    T & F & F & T \\
+    \hline
+    F & T & T & T \\ 
+    \hline
+    F & T & F & F \\
+    \hline
+    F & F & T & T \\
+    \hline
+    F & F & F & F \\
+    \hline
+    \end{tabular}
+    \end{center}
+    
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.3.4, section b,d
+	\medskip
+	
+	b.
+	\begin{center}
+    \begin{tabular}{||c c c||} 
+    \hline
+    p & q & $(p\xrightarrow[]{}q)\xrightarrow[]{}(q\xrightarrow[]{}p)$ \\ [0.5ex] 
+    \hline\hline
+    T & T & T \\ 
+    \hline
+    T & F & T \\
+    \hline
+    F & T & F \\
+    \hline
+    F & F & T \\
+    \hline
+    \end{tabular}
+    \end{center}	
+    
+    d.
+	\begin{center}
+    \begin{tabular}{||c c c||} 
+    \hline
+    p & q & $(p\xleftrightarrow[]{}q)\bigoplus(p\xleftrightarrow[]{}\neg q)$ \\ [0.5ex] 
+    \hline\hline
+    T & T & T \\ 
+    \hline
+    T & F & T \\
+    \hline
+    F & T & T \\
+    \hline
+    F & F & T \\
+    \hline
+    \end{tabular}
+    \end{center}	
+	
+
+	\newpage
+	\section*{Question 5}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.2.7, section b,c
+	\medskip
+	
+	b. $(B \wedge D) \vee (B \wedge M) \vee (D \wedge M)$
+	
+	c. $B \vee (D \wedge M)$
+
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.3.7, section b-e
+	\medskip
+	
+	b. $(s \vee y)\xrightarrow[]{}p$
+	
+	c. $p \xrightarrow[]{}y$
+	
+	d. $p\xleftrightarrow[]{}(s \wedge y)$
+	
+	e. $p\xrightarrow[]{}(s \vee y)$
+	
+
+	\vspace{3mm}
+	\textbf{3.} Exercise 1.3.9, section c,d
+	\medskip
+	
+	c. $c\xrightarrow[]{}p$
+	
+	d. $c\xrightarrow[]{}p$
+	
+	\newpage
+	\section*{Question 6}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.3.6, section b-d
+	\medskip
+	
+	b. \textbf{If Joe is eligible for the honors program, then Joe maintains a B average.}
+	
+	c. \textbf{If Rajiv can go on the roller coaster, then he is at least four feet tall.}
+	
+	d. \textbf{If Rajiv is at least four feet tall, then he can go on the roller coaster.}
+	
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.3.10, section c-f
+	\medskip
+	
+	c. \textbf{False}
+	
+	With r being unknown, the left-hand-side would always be True and the right-hand-side would always be False. Thus, we get $\rm T\xleftrightarrow[]{}\rm F$, which is \textbf{False}.
+	
+	d. \textbf{Unknown}
+	
+	If r is True, we get $\rm T\xleftrightarrow[]{}\rm F$, which is False.
+	
+	If r is False, we get $\rm F\xleftrightarrow[]{}\rm F$, which is True.
+	
+	Since we get two results depending on r, we get \textbf{Unknown} for this question.
+	
+	e. \textbf{Unknown}
+	
+	If r is True, we get $\rm T\xrightarrow[]{}\rm T$, which is True.
+	
+	If r is False, we get $\rm T\xrightarrow[]{}\rm F$, which is False.
+	
+	Since we get two results depending on r, we get \textbf{Unknown} for this question.
+	
+	f. \textbf{True}
+	
+	If r is True, we get $\rm F\xrightarrow[]{}\rm F$, which is True.
+	
+	If r is False, we get $\rm F\xrightarrow[]{}\rm T$, which is True.
+	
+	Since we get True in both cases, we get \textbf{True} for this question.
+	
+
+	\newpage
+	\section*{Question 7}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	Exercise 1.4.5, section b-d
+	\medskip
+	
+	b. \textbf{not logically equivalent}
+	\begin{center}
+    \begin{tabular}{||c c c c c||} 
+    \hline
+    j & l & r & $\neg j\xrightarrow[]{}(l\vee r)$ & $(r\wedge \neg l)\xrightarrow[]{}j$\\ [0.5ex] 
+    \hline\hline
+    T & T & T & T & T\\ 
+    \hline
+    T & T & F & T & T\\ 
+    \hline
+    T & F & T & T & T\\ 
+    \hline
+    T & F & F & T & T\\ 
+    \hline
+    F & T & T & T & T\\ 
+    \hline
+    F & T & F & T & T\\ 
+    \hline
+    F & F & T & T & F\\ 
+    \hline
+    F & F & F & F & T\\ 
+    \hline
+    \end{tabular}
+    \end{center}
+
+    c. \textbf{not logically equivalent}
+    \begin{center}
+    \begin{tabular}{||c c c c||} 
+    \hline
+    j & l & $j\xrightarrow[]{}\neg l$ & $\neg j\xrightarrow[]{}l$ \\ [0.5ex] 
+    \hline\hline
+    T & T & F & T \\ 
+    \hline
+    T & F & T & T \\
+    \hline
+    F & T & T & T \\
+    \hline
+    F & F & T & F \\
+    \hline
+    \end{tabular}
+    \end{center}
+    
+    d. \textbf{not logically equivalent}
+    \begin{center}
+    \begin{tabular}{||c c c c c||} 
+    \hline
+    j & l & r & $(r\vee \neg l)\xrightarrow[]{}j$ & $j\xrightarrow[]{}(r\wedge \neg l)$\\ [0.5ex] 
+    \hline\hline
+    T & T & T & T & F\\ 
+    \hline
+    T & T & F & T & F\\ 
+    \hline
+    T & F & T & T & T\\ 
+    \hline
+    T & F & F & T & F\\ 
+    \hline
+    F & T & T & F & T\\ 
+    \hline
+    F & T & F & T & T\\ 
+    \hline
+    F & F & T & F & T\\ 
+    \hline
+    F & F & F & F & T\\ 
+    \hline
+    \end{tabular}
+    \end{center}
+    
+	\newpage
+	\section*{Question 8}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.5.2, section c,f,i
+	\medskip
+	
+	\textbf{c.}
+	$(p\xrightarrow[]{}q)\wedge (p\xrightarrow[]{}r)$
+	
+	= $(\neg p\vee q)\wedge (\neg p\vee r)$\hspace{5mm} \textbf{Conditional identity}
+	
+	= $\neg p\vee (q\wedge r)$\hspace{18mm}\textbf{Distributive law}
+	
+	=$p\xrightarrow[]{}(q\wedge r)$\hspace{20mm}\textbf{Conditional identity}
+	\vspace{2mm}
+	
+	\textbf{f.}
+	$\neg (p\vee (\neg p\wedge q))$
+
+	= $\neg p\wedge (\neg (\neg p\wedge q))$\hspace{9mm}\textbf{De Morgan's law}
+	
+	= $\neg p\wedge (\neg \neg p\vee \neg q)$\hspace{10mm}\textbf{De Morgan's law}
+	
+	= $\neg p\wedge (p\vee \neg q)$\hspace{15mm}\textbf{Double negation law}
+	
+	= $(\neg p\wedge p)\vee (\neg p \wedge \neg q)$\hspace{3mm}\textbf{Distributive law}
+	
+	= $(p\wedge \neg p)\vee (\neg p\wedge \neg q)$\hspace{3mm}\textbf{Commutative law}
+	
+	= $\rm F\vee (\neg p\wedge \neg q)$\hspace{14.5mm}\textbf{Complement law}
+	
+	= $(\neg p\wedge \neg q)\vee \rm F$\hspace{14mm}
+	\textbf{Commutative law}
+	
+	= $\neg p\wedge \neg q$\hspace{25mm}\textbf{Identity law}
+	\vspace{2mm}
+	
+	\textbf{i.}
+	$(p\wedge q)\xrightarrow[]{}r$
+	
+	= $\neg (p\wedge q)\vee r$\hspace{19mm}\textbf{Conditional identity}
+	
+	= $(\neg p\vee \neg q)\vee r$\hspace{17mm}\textbf{De Morgan's law}
+	
+	= $(\neg q\vee \neg p)\vee r$\hspace{17mm}\textbf{Commutative law}
+	
+	= $\neg q\vee (\neg p\vee r)$\hspace{17mm}\textbf{Associative law}
+	
+	= $(\neg p\vee r)\vee \neg q$\hspace{17mm}\textbf{Commutative law}
+	
+	= $\neg (p\wedge \neg r)\vee \neg q$\hspace{15mm}\textbf{De Morgan's law}
+	
+	= $(p\wedge \neg r)\xrightarrow[]{}\neg q$\hspace{15.5mm}\textbf{Conditional identity}
+	
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.5.3, section c,d
+	\medskip
+	
+	\textbf{c.}
+	$\neg r\vee (\neg r\xrightarrow[]{}p)$
+
+	= $\neg r\vee (\neg \neg r\vee p)$\hspace{15mm}\textbf{Conditional identity}
+	
+	= $\neg r\vee (r\vee p)$\hspace{20mm}\textbf{Double negation law}
+	
+	= $(\neg r\vee r)\vee p$\hspace{20mm}\textbf{Associative law}
+	
+	= $(r\vee \neg r)\vee p$\hspace{20mm}\textbf{Commutative law}
+	
+	= $\rm T\vee p$\hspace{30.5mm}\textbf{Complement law}
+	
+	= $p\vee \rm T$\hspace{31mm}\textbf{Commutative law}
+	
+	= $\rm T$\hspace{37.5mm}\textbf{Domination law}
+	
+	Thus, the statement is a \textbf{tautology}.
+	\vspace{2mm}
+	
+	\textbf{d.}
+    $\neg (p\xrightarrow[]{}q)\xrightarrow[]{}\neg q$
+    
+    = $\neg (\neg p\vee q)\xrightarrow[]{}\neg q$\hspace{16mm}\textbf{Conditional identity}
+    
+    = $(\neg p\vee q)\vee \neg q$\hspace{20mm}\textbf{Conditional identity}
+	
+	= $\neg p\vee (q\vee \neg q)$\hspace{20mm}\textbf{Associative law}
+	
+	= $\neg p\vee \rm T$\hspace{31mm}\textbf{Complement law}
+	
+	= $\rm T$\hspace{40mm}\textbf{Domination law}
+	
+	Thus, the statement is a \textbf{tautology}.
+	
+	\newpage
+	\section*{Question 9}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.6.3, section c,d
+	\medskip
+	
+	\textbf{c.} $\exists_x (x=x^2)$
+	
+	\textbf{d.} $\forall_x (x\leq x^2)$
+	
+	
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.7.4, section b-d
+	\medskip
+	
+	\textbf{b.}
+	$\forall_x (\neg S(x)\wedge W(x))$
+	
+	\textbf{c.}
+	$\forall_x (S(x)\xrightarrow[]{}\neg W(x))$
+	
+	\textbf{d.}
+	$\exists_x (S(x)\wedge W(x))$
+
+	\newpage
+	\section*{Question 10}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.7.9, section c-i
+	\medskip
+	
+	c. \textbf{True}
+	
+	Example: when x=a, we get $\rm F\xrightarrow[]{}\rm T$, which is \textbf{True}.
+	
+	d. \textbf{True}
+	
+	Example: when x=e
+	
+	e. \textbf{True}
+	
+	We get $\rm T\wedge \rm T$, which leads to \textbf{True}.
+	
+	f. \textbf{True}
+	
+	g. \textbf{False}
+	
+	Counter example: when x=c
+	
+	h. \textbf{True}
+	
+	i. \textbf{True}
+	
+	Example: when x=a
+	
+	\vspace{18mm}
+	\textbf{2.} Exercise 1.9.2, section b-i
+	\medskip
+	
+	b. \textbf{True}
+	
+	Example: Q(2,1) Q(2,2) Q(2,3)
+	
+	c. \textbf{True}
+	
+	Example: P(1,1) P(2,1) P(3,1)
+	
+	d. \textbf{False}
+	
+	All values for predicate S(x,y) are False.
+	
+	e. \textbf{False}
+	
+	Example: Q(1,1) Q(2,1) Q(3,1)
+	
+	f. \textbf{True}
+	
+	Example: P(1,1) P(2,1) P(3,1)
+	
+	g. \textbf{False}
+	
+	Example: P(1,2) P(2,2) P(3,2)
+	
+	h. \textbf{True}
+	
+	Example: Q(2,1) Q(2,2) Q(2,3)
+	
+	i. \textbf{True}
+	
+	All values for predicate $\neg$S(x,y) are True.
+	
+	\newpage
+	\section*{Question 11}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.10.4, section c-g
+	\medskip
+	
+	\textbf{c.}
+	$\exists_x \exists_y ((x+y)=(x*y))$
+	
+	\textbf{d.}
+	$\forall_x \forall_y (((x>0)\wedge (y>0))\xrightarrow[]{}(x/y > 0))$
+	
+	\textbf{e.}
+	$\forall_x (((x>0)\wedge (x<1))\xrightarrow[]{}(1/x > 1))$
+	
+	\textbf{f.}
+	$\forall_x \exists_y (y<x)$
+	
+	\textbf{g.}
+	$\forall_x \exists_y ((x\neq 0)\xrightarrow[]{}(x*y=1))$
+	
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.10.7, section c-f
+	\medskip
+	
+	\textbf{c.}
+	$\exists_x (N(x)\wedge D(x))$
+	
+	\textbf{d.}
+	$\forall_x (D(x)\xrightarrow[]{}P(Sam,x))$
+	
+	\textbf{e.}
+	$\exists_x \forall_y (N(x)\wedge P(x,y))$
+	
+	\textbf{f.}
+	$\exists_x((N(x)\wedge D(x))\wedge \forall_y (((x\neq y)\wedge (N(y)))\xrightarrow[]{}\neg D(y)))$
+	
+	\vspace{3mm}
+	\textbf{3.} Exercise 1.10.10, section c-f
+	\medskip
+	
+	\textbf{c.}
+	$\forall_x \exists_y ((y\neq Math101)\wedge T(x,y))$
+	
+	\textbf{d.}
+	$\exists_x \forall_y ((y\neq Math101)\xrightarrow[]{}T(x,y))$
+	
+	\textbf{e.}
+	$\forall_x \exists_y \exists_z ((x\neq Sam)\xrightarrow[]{}(T(x,y) \wedge (z\neq y)\wedge T(x,z)))$
+	
+	\textbf{f.}
+	$\exists_y \exists_z \forall_p (T(Sam,y)\wedge (z\neq y)\wedge T(Sam,z)\wedge ((p\neq y)\wedge (p\neq z))\xrightarrow[]{}\neg T(Sam,p))$
+	
+	\newpage
+	\section*{Question 12}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1.} Exercise 1.8.2, section b-e
+	\medskip
+	
+	\textbf{b.}
+	$\forall_x (D(x)\vee P(x))$
+	
+	\textbf{Negation:}
+	$\neg \forall_x (D(x)\vee P(x))$
+	
+	De Morgan's law: $\exists_x \neg (D(x)\vee P(x))$
+	
+	De Morgan's law: $\exists_x (\neg D(x)\wedge \neg P(x))$
+	
+	\textbf{Translation:}
+	There is a patient who has not given medication and not given placebo.
+	\vspace{2mm}
+	
+	\textbf{c.}
+	$\exists_x (D(x)\wedge M(x))$
+	
+	\textbf{Negation:}
+	$\neg \exists_x (D(x)\wedge M(x))$
+	
+	De Morgan's law: $\forall_x \neg (D(x)\wedge M(x))$
+	
+	De Morgan's law: $\forall_x (\neg D(x)\vee \neg M(x))$
+	
+	\textbf{Translation:}
+	Every patient was either not given medication or not had migraines or both.
+	\vspace{2mm}
+	
+	\textbf{d.}
+	$\forall_x (P(x)\xrightarrow[]{}M(x))$
+	
+	\textbf{Negation:}
+	$\neg \forall_x (P(x)\xrightarrow[]{}M(x))$
+	
+	Conditional identity: $\neg \forall_x (\neg P(x)\vee M(x))$
+	
+	De Morgan's law: $\exists_x \neg (\neg P(x)\vee M(x))$
+	
+	De Morgan's law: $\exists_x (\neg \neg P(x)\wedge \neg M(x))$
+	
+	Double negation law: $\exists_x (P(x)\wedge \neg M(x))$
+	
+	\textbf{Translation:}
+	There is a patient who was given placebo and not have migraines.
+	\vspace{2mm}
+	
+	\textbf{e.}
+	$\exists_x (M(x)\wedge P(x))$
+	
+	\textbf{Negation:}
+	$\neg \exists_x (M(x)\wedge P(x))$
+	
+	De Morgan's law: $\forall_x \neg (M(x)\wedge P(x))$
+	
+	De Morgan's law: $\forall_x (\neg M(x)\vee \neg P(x))$
+	
+	\textbf{Translation:}
+	Every patient was either not have migraines or not given placebo or both.
+	
+	
+	\vspace{3mm}
+	\textbf{2.} Exercise 1.9.4, section c-e
+	\medskip
+	
+	\textbf{c.}
+	$\exists_x \forall_y (P(x,y)\xrightarrow[]{}Q(x,y))$
+	
+	De Morgan's law: 
+	$\forall_x \exists_y \neg (P(x,y)\xrightarrow[]{}Q(x,y))$
+	
+	Conditional identity:
+	$\forall_x \exists_y \neg (\neg P(x,y)\vee Q(x,y))$
+	
+	De Morgan's law:
+	$\forall_x \exists_y (\neg \neg P(x,y)\wedge \neg Q(x,y))$
+	
+	Double negation law:
+	$(\forall_x \exists_y (P(x,y)\wedge \neg Q(x,y)))$
+	
+	\textbf{Thus, final answer: }
+	$(\forall_x \exists_y (P(x,y)\wedge \neg Q(x,y)))$
+	\vspace{2mm}
+	
+	\textbf{d.}
+	$\exists_x \forall_y (P(x,y)\xleftrightarrow[]{}P(y,x))$
+	
+	De Morgan's law:
+	$\forall_x \exists_y \neg (P(x,y)\xleftrightarrow[]{}P(y,x))$
+	
+	Conditional identity:
+	$\forall_x \exists_y \neg ((P(x,y)\xrightarrow[]{}P(y,x))\wedge (P(y,x)\xrightarrow[]{}P(x,y))$
+	
+	Conditional identity:
+	$\forall_x \exists_y \neg ((\neg P(x,y)\vee P(y,x))\wedge (\neg P(y,x)\vee P(x,y)))$
+	
+	De Morgan's law:
+	$\forall_x \exists_y (\neg (\neg P(x,y)\vee P(y,x))\vee \neg(\neg P(y,x)\vee P(x,y)))$
+	
+	De Morgan's law:
+	$\forall_x \exists_y ((\neg \neg P(x,y)\wedge \neg P(y,x))\vee (\neg \neg P(y,x)\wedge \neg P(x,y))))$
+	
+	Double negation law:
+	$\forall_x \exists_y ((P(x,y)\wedge \neg P(y,x))\vee (P(y,x)\wedge \neg P(x,y)))$
+	
+	\textbf{Thus, final answer: }
+	$\forall_x \exists_y ((P(x,y)\wedge \neg P(y,x))\vee (P(y,x)\wedge \neg P(x,y)))$
+	\vspace{2mm}
+	
+	\textbf{e.}
+	$\exists_x \exists_y P(x,y)\wedge \forall_x \forall_y Q(x,y)$
+	
+	De Morgan's law:
+	$\forall_x \forall_y \neg P(x,y)\vee \exists_x \exists_y \neg Q(x,y)$
+	
+	\textbf{Thus, final answer: }
+	$\forall_x \forall_y \neg P(x,y)\vee \exists_x \exists_y \neg Q(x,y)$
+
+\end{document}
