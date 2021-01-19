@@ -13,6 +13,12 @@
 \usepackage{mathtools}
 \usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=blue]{hyperref}
 
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{amsthm}
+
 \DeclareMathOperator*{\E}{\mathbb{E}}
 \let\Pr\relax
 \DeclareMathOperator*{\Pr}{\mathbb{P}}
@@ -326,55 +332,93 @@
     \end{tabular}
     \end{center}
 	
-	
-	
 	\newpage
 	\section*{Question 6}
 	
 	\textbf{d.}
-	\textbf{Proof.}
+	\begin{proof}
 	
 	Direct proof. Assume that m and n are two odd integers. We will show that m*n is also an odd integer. Since m, n are odd, m = 2*k+1, n = 2*j+1 for some integers k, j. Plug the expression for m, n into m*n:
-	
 	m*n = (2*k+1)*(2*j+1) = 2*(2kj+k+j) + 1
 	
-	Since k, j are integers, then (2kj+k+j) is also an integer. Since m*n = 2*c + 1, where c = 2kj+k+j is an integer, then m*n is odd. Thus, the product of two odd integers is an odd integer. \textbullet 
+	Since k, j are integers, then (2kj+k+j) is also an integer. Since m*n = 2*c + 1, where c = 2kj+k+j is an integer, then m*n is odd. Thus, the product of two odd integers is an odd integer.
+	\end{proof}
 	
 	\vspace{2mm}
 	\textbf{c.}
-	\textbf{proof.}
+	\begin{proof}
 	
-	Direct proof. Assume x is a real number and x $\leq$ 3, we will show that $12-7x+x^2 \geq 0$. Since $x\leq 3$, then we have 
+	Direct proof. Assume x is a real number and x $\leq$ 3, we will show that $12-7x+x^2 \geq 0$. Since $x\leq 3$, then we have $x-3\leq 0$ and $x-4<0$. And it leads to $(x-3)*(x-4)\geq 0$. If we expand the expression, we get $12x-7x+x^2$. 
+	\end{proof}
 	
 	\newpage
 	\section*{Question 7}
 	\textbf{d.}
+	\begin{proof}
+	
+	Proof by contrapositive. We assume that n is an even integer and show that $n^2-2*n+7$ is odd. If n is even, n=2*k for some integer k. Plug in the expression: $n^2-2*n+7=2*(2*k^2-2*k+3)+1$
+	
+	Since k is integer, then $2*k^2-2*k+3$ is also integer. Since $n^2-2*n+7=2*c+1$, where $c=2*k^2-2*k+3$, which is an integer, then $n^2-2*n+7$ is odd. 
+	\end{proof}
 	
 	\vspace{2mm}
 	\textbf{f.}
+	\begin{proof}
+	
+	Proof by contrapostive. We assume that  for a non-zero number x that $1/x$ is not irrational and prove that x must be rational. Since x is a real number, $1/x$ is also a real number. Every real number is either rational or irrational. Therefore, $1/x$ must be rational. By the definition of a rational number, $1/x=a/b$, where a and b are integers and $b\neq 0$. Since x is non-zero, $a\neq 0$. Therefore, $x=1/(1/x)=b/a$
+	
+	From the equation, we can see that x is represented as the ratio of 2 integers a,b with $a\neq 0$ and $b\neq 0$. Thus, x is rational.
+	\end{proof}
 	
 	\vspace{2mm}
 	\textbf{g.}
+	\begin{proof}
+	
+	Proof by contrapositive. We assume that for real numbers x and y, $x>y$, and prove that $x^3+x*y^2>x^2*y+y^3$. $x>y$ means $x-y>0$, which leads to $(x-y)^2>0$. If we expand the expression, we get $x^2+y^2>2*x*y$. The equation would not change if we multiply both side by a same positive number (x-y): $(x^2+y^2)*(x-y)>2*x*y*(x-y)$, which leads to $x^3+x*y^2>y^3+x^2*y$. 
+	\end{proof}
 	
 	\vspace{2mm}
 	\textbf{l.}
+	\begin{proof}
 	
+	Proof by contrapositive. We assume for integers x and y that it is not true that x>10 or y>10, and prove that $x+y\leq 20$. $\neg ((x>10)\vee (y>10))$ means that $(x\leq 10)\wedge (y\leq 10)$. Then, $x+y\leq 10+10=20$, which means $x+y\leq 20$. 
+	\end{proof}
 	
 	\newpage
 	\section*{Question 8}
-	
 	\textbf{c.}
-	
+	\begin{proof}
+	Proof by contradiction. Suppose that the average of three real numbers is smaller than all numbers. x, y, z are three real numbers and we get $((x+y+z)/3<x)\wedge ((x+y+z)/3<y)\wedge ((x+y+z)/3<z)$. Since every number is smaller than the average, the sum of the averages would be smaller than the sum of x, y and z. In other words, $((x+y+z)/3*3)<(x+y+z)$, which leads to $x+y+z<x+y+z$. This contradicts the fact that $x+y+z=x+y+z$.
+    \end{proof}
+
 	\vspace{2mm}
 	\textbf{e.}
+	\begin{proof}
+	Proof by contradiction. Suppose that there is a smallest integer, x. If x is an integer, x-1 must also be an integer. $x-1<x$ And this contradicts the assumption that x is the smallest integer. 
+	\end{proof}
 	
 	\newpage
 	\section*{Question 9}
-	
 	\textbf{c.}
+	\begin{proof}
+	We consider two cases: x and y are both odd, x and y are both even.
 	
+	\textbf{Case 1: } x and y are both odd.
 	
-
+	x = 2*k +1, y = 2*j +1 for some integers k, j.
 	
-
+	$x+y=(2*k+1)+(2*j+1)=2*(k+j+1)$
+	
+	Since k, j are integers, k+j+1 is also integer. Therefore, x + y = 2*c, where c = k + j+ 1, which is an integer. Then x + y is even.
+	
+	\textbf{Case 2: } x and y are both even.
+	
+	x = 2*k, y = 2*j for some integers k, j.
+	
+	$x+y=2*(k+j)$
+	
+	Since k, j are integers, k+j is also an integer. Therefore, x + y = 2*c, where c = k+j, which is an integer. Then x+y is even.
+	
+	\end{proof}
+	
 \end{document}
