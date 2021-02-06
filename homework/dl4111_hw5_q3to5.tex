@@ -62,10 +62,32 @@
 	
 	\textbf{1. Exercise 4.1.3, sections b, c}
 	
+	\textbf{b. Not a well-defined function}
+	
+	If x = 2 or x = -2, the denominator would be 0. 
+	Then f(x) would not be a real number.
+	
+	\textbf{c. A well-defined function}
+	
+	The range is $[0, \infty]$
 	
 	\vspace{10mm}
 	\textbf{2. Exercise 4.1.5, sections b, d, h, i ,l}
 	
+	\textbf{b.}
+	$\{$ 4, 9, 16, 25 $\}$
+	
+	\textbf{d.}
+	$\{$ 0, 1, 2, 3, 4, 5 $\}$
+	
+	\textbf{h.}
+	$\{ (1,1), (2,1), (3,1), (1,2), (2,2), (3,2), (1,3), (2,3), (3,3) \}$
+	
+	\textbf{i.}
+	$\{ (1,2), (1,3), (1,4), (2,2), (2,3), (2,4), (3,2), (3,3), (3,4) \}$
+	
+	\textbf{l.}
+	$\{\varnothing,\{2\}, \{3\}, \{2,3\}\}$ 
 	
 	
 	\newpage
@@ -75,17 +97,73 @@
 	
 	\textbf{1. Exercise 4.2.2, sections c, g, k}
 	
+	\textbf{c. It's one-to-one, but not onto}
+	
+	Let y be a integer which is not a perfect cube, for instance we have y = 2. In this case, there is no $x\in\mathbb{Z}$ such that $x^3=y$
+	
+	\textbf{g. It's one-to-one, but not onto}
+	
+	Since 2*y always produces even results, there is no element in the domain that would lead to the element of (1,1) in the target when $x\in\mathbb{Z}$ and $y\in\mathbb{Z}$.
+	
+	\textbf{k. It's one-to-one, but not onto}
+	
+	There is no element in the domain that would lead to the element of 1 (a positive integer) in the target. The smallest element in range is 3 when x = 1 and y = 1.
+	
+	\vspace{10mm}
 	\textbf{2. Exercise 4.2.4, sections b, c, d, g}
 	
+	\textbf{b. It's neither one-to-one nor onto}
+	
+	Since f(110) = f(010) = 110, it is not one-to-one. 
+	
+	Since the element of (0,0,0) in the target would not be mapped by any element from the domain, it is not onto.
+	
+	\textbf{c. It's one-to-one and onto}
+	
+	\textbf{d. It's one-to-one, but not onto}
+	
+	The element of 0001 in the target would not be mapped by any element from the domain.
+	
+	\textbf{g. It's neither one-to-one nor onto}
+	
+	Since $f(\{1,2,3\})=f(\{2,3\})=\{2,3\}$, it is not one-to-one.
+	
+	Since $\{1\}$ in the target would never be mapped from any element in the domain, it is not onto.
+	
+	\vspace{10mm}
 	B. Give an example of a function from the set of integers to the set of positive integers that is:
 	
 	\textbf{1. one-to-one, but not onto}
 	
+    \begin{equation*}
+    f\colon\mathbb{Z}\rightarrow\mathbb{Z^+}, f(x) = 
+    \begin{cases}
+    2*|x| + 3, \text{ if } x\leq 0\\
+    2*x, \text{ if } x > 0
+    \end{cases}
+    \end{equation*}
+	
 	\textbf{2. onto, but not one-to-one}
+	
+	\begin{equation*}
+	    f\colon\mathbb{Z}\rightarrow\mathbb{Z^+}, f(x) = |x| + 1
+	\end{equation*}
 	
 	\textbf{3. one-to-one and onto}
 	
+	\begin{equation*}
+	    f\colon\mathbb{Z}\rightarrow\mathbb{Z^+}, f(x) = 
+	    \begin{cases}
+	        2*|x|+1, \text{ if } x\leq 0\\
+	        2*x, \text{ if } x > 0
+	    \end{cases}
+	\end{equation*}
+	
 	\textbf{4. neither one-to-one nor onto}
+	
+	\begin{equation*}
+	    f\colon\mathbb{Z}\rightarrow\mathbb{Z^+}, f(x) = 1
+	\end{equation*}
 	
 	\newpage
 	\section*{Question 5}
@@ -94,12 +172,47 @@
 	
 	\textbf{1. Exercise 4.3.2, sections c, d, g, i}
 	
+	\textbf{c.}
+	$f^-^1(x)=(x-3)/2$
+	
+	\textbf{d.}
+	It's onto, but not one-to-one. So there is no well-defined inverse.
+	
+	$f(\{1\})=f(\{2\})=1$, so it is not one-to-one.
+	
+	\textbf{g.}
+	$f^{-1}(x)=f(x)=\{0,1\}^3$
+	
+	\textbf{i.}
+	$f^{-1}(x,y)=(x-5,y+2)$
+	
+	\vspace{10mm}
 	\textbf{2. Exercise 4.4.8, sections c, d}
 	
+	\textbf{c.}
+	$f\circ h$ = $f(h(x))$ = $2*(x^2+1)+3$ = $2*x^2+5$
+	
+	\textbf{d.}
+	$h\circ f$ = $h(f(x))$ = $(2*x+3)^2+1$ = $4*x^2+12*x+10$
+	
+	\vspace{10mm}
 	\textbf{3. Exercise 4.4.2, sections b-d}
 	
+	\textbf{b.}
+	$f\circ h(52)$ = $(\lceil 52/5\rceil)^2$ = $11^2$ = 121
+	
+	\textbf{c.}
+	$g\circ h\circ f(4)$ = $2^{\lceil 16/5\rceil}$ = $2^4$ = 16
+	
+	\textbf{d.}
+	$h\circ f$ = $h(f(x))$ = $\lceil x^2/5\rceil$
+	
+	\vspace{10mm}
 	\textbf{4. Exercise 4.4.6, sections c-e}
 	
+	
+	
+	\vspace{10mm}
 	\textbf{5. Extra Credit: Exercise 4.4.4, sections c, d}
 	
 \end{document}
