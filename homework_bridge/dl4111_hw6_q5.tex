@@ -1,0 +1,117 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{url}
+\usepackage[demo]{graphicx}
+\usepackage{caption} 
+\usepackage{algpseudocode}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{amsthm}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+\DeclareMathOperator*{\R}{\mathbb{E}}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\newcommand{\homework}[2]{
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{
+				\hbox to 6.50in { {\bf NYU Computer Science Bridge to Tandon Course} \hfill Winter 2021 }
+				\vspace{4mm}
+				\hbox to 6.50in { {\Large \hfill Homework 6  \hfill} }
+				\vspace{2mm}
+				\hbox to 6.50in { {Name: Danrong Li \hfill} NetID: dl4111}
+
+			}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+
+\begin{document}
+	
+	\homework{1}{Danrong Li}
+	\section*{Question 5}
+	
+	Use the definition of $\Theta$ in order to show the following:
+	
+	\vspace{10mm}
+	The definitions for $\Theta$, ${O}$ and $\Omega$ are as follows:
+	
+	1. T(N) = ${O}$(f(N)) 
+	
+	if there are positive constants $c_1$ and $n_0$ such that T(N) $\leq$ $c_1$*f(N) when N $\geq$ $n_0$.
+	
+	2. T(N) = $\Omega$(g(N))
+	
+	if there are positive constants $c_2$ and $n_0$ such that T(N) $\geq$ $c_2$*g(N) when N $\geq$ $n_0$.
+	
+	3. T(N) = $\Theta$(h(N))
+	
+	if and only if T(N) = ${O}$(h(N)) and T(N) = $\Omega$(h(N)).
+	
+	\vspace{10mm}
+	\textbf{a.}
+	$5n^3+2n^2+3n=\Theta (n^3)$
+	
+	If we take $c_1$ = 10, $c_2$ = 5, $n_0$ = 0,
+	
+	then for all $n\geq n_0$, we have:
+	
+	$5n^3+2n^2+3n\leq 5n^3+2n^3+3n^3=10n^3$
+	
+	$5n^3+2n^2+3n\geq 5n^3$
+	
+	Thus, we have:
+	$5n^3\leq 5n^3+2n^2+3n\leq 10n^3$
+	
+	Therefore, according to the definitions stated above, we have
+	
+	$5n^3+2n^2+3n=\Theta (n^3)$
+	
+	\vspace{10mm}
+	\textbf{b.}
+	$\sqrt{7n^2+2n-8}=\Theta (n)$
+	
+	If we take $c_1$ = 3, $c_2$ = 1, $n_0$ = 1,
+	
+	then for all $n\geq n_0$, we have:
+	
+	$\sqrt{7n^2+2n-8}\leq \sqrt{7n^2+2n}\leq \sqrt{7n^2+2n^2}\leq \sqrt{9n^2}=3n$
+	
+	$\sqrt{7n^2+2n-8}\geq \sqrt{7n^2+2n-8n}\geq \sqrt{7n^2+(2-8)n^2}\geq \sqrt{n^2}=n$
+	
+	Thus, we have:
+	$n\leq \sqrt{7n^2+2n-8}\leq 3n$
+	
+	Therefore, according to the definitions stated above, we have
+	
+	$\sqrt{7n^2+2n-8}=\Theta (n)$
+	
+	
+\end{document}
