@@ -1,0 +1,221 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{url}
+\usepackage[demo]{graphicx}
+\usepackage{caption} 
+\usepackage{algpseudocode}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{amsthm}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+\DeclareMathOperator*{\R}{\mathbb{E}}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\newcommand{\homework}[2]{
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{
+				\hbox to 6.50in { {\bf NYU Computer Science Bridge to Tandon Course} \hfill Winter 2021 }
+				\vspace{4mm}
+				\hbox to 6.50in { {\Large \hfill Homework 7  \hfill} }
+				\vspace{2mm}
+				\hbox to 6.50in { {Name: Danrong Li \hfill} NetID: dl4111}
+
+			}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+
+\begin{document}
+	
+	\homework{1}{Danrong Li}
+	\section*{Question 3}
+	
+	\textbf{1. Solve Exercise 8.2.2, section b from the Discrete Book.}
+	
+	\vspace{10mm}
+	The definitions for $\Theta$, ${O}$ and $\Omega$ are as follows:
+	
+	1. T(N) = ${O}$(f(N)) 
+	
+	if there are positive constants $c_1$ and $n_0$ such that T(N) $\leq$ $c_1$*f(N) when N $\geq$ $n_0$.
+	
+	2. T(N) = $\Omega$(g(N))
+	
+	if there are positive constants $c_2$ and $n_0$ such that T(N) $\geq$ $c_2$*g(N) when N $\geq$ $n_0$.
+	
+	3. T(N) = $\Theta$(h(N))
+	
+	if and only if T(N) = ${O}$(h(N)) and T(N) = $\Omega$(h(N)).
+	
+	\vspace{10mm}
+	\textbf{b. }
+	$n^3+3n^2+4=\Theta (n^3)$
+	
+	We first prove $n^3+3n^2+4={O}(n^3)$
+	\begin{proof}
+    If we take $c_1$ = 8, $n_0$ = 1,
+	
+	then for all $n\geq n_0$, we have:
+	
+	$n^3+3n^2+4\leq n^3+3n^3+4n^3\leq 8n^3$
+	
+	The above equation makes sense since we have $n\geq n_0$.
+	
+	And it proves that for $n\geq n_0$, $n^3+3n^2+4\leq 8n^3$, which means $n^3+3n^2+4={O}(n^3)$
+    \end{proof}
+
+	We then prove that $n^3+3n^2+4=\Omega(n^3)$
+	\begin{proof}
+	If we take $c_2$ = 1, $n_0$ = 0,
+	
+	then for all $n\geq n_0$, we have:
+	
+	$n^3+3n^2+4\geq n^3+3n^2\geq n^3$
+	
+	The above equation makes sense since we have $n\geq n_0$.
+	
+	And it proves that $n^3+3n^2+4\geq n^3$, which means $n^3+3n^2+4=\Omega(n^3)$
+	\end{proof}
+	
+	\textbf{Therefore, according to the definitions stated above, we can prove:}
+	
+	$n^3+3n^2+4=\Theta (n^3)$
+	
+	\vspace{10mm}
+	\textbf{2. Solve Exercise 8.3.5, sections a-e from the Discrete Math zyBook}
+	
+	\newpage
+	\section*{Question 4}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. b}
+	
+	\vspace{10mm}
+	\textbf{1. c}
+	
+	\vspace{10mm}
+	\textbf{2. a}
+	
+	\vspace{10mm}
+	\textbf{3. b}
+	
+	\vspace{10mm}
+	\textbf{3. c}
+	
+	\vspace{10mm}
+	\textbf{4. a}
+	
+	\vspace{10mm}
+	\textbf{4. b}
+	
+	\newpage
+	\section*{Question 5}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. a}
+	
+	
+	\vspace{10mm}
+	\textbf{1. b}
+	
+	\vspace{10mm}
+	\textbf{2. a}
+	
+	\vspace{10mm}
+	\textbf{2. b}
+	
+	\vspace{10mm}
+	\textbf{2. c}
+	
+	\vspace{10mm}
+	\textbf{2. d}
+	
+	\vspace{10mm}
+	\textbf{2. e}
+	
+	\vspace{10mm}
+	\textbf{2. f}
+	
+	\vspace{10mm}
+	\textbf{2. g}
+	
+	
+	\vspace{10mm}
+	\textbf{3. a}
+	
+	\vspace{10mm}
+	\textbf{4. c}
+	
+	\vspace{10mm}
+	\textbf{4. d}
+	
+	\vspace{10mm}
+	\textbf{4. e}
+	
+	\vspace{10mm}
+	\textbf{4. f}
+	
+	\vspace{10mm}
+	\textbf{5. a}
+	
+	\vspace{10mm}
+	\textbf{5. b}
+
+	
+	\newpage
+	\section*{Question 6}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. a}
+	
+	\vspace{10mm}
+	\textbf{1. b}
+	
+	\vspace{10mm}
+	\textbf{2. a}
+	
+	\vspace{10mm}
+	\textbf{2. b}
+	
+	\newpage
+	\section*{Question 7}
+	How many one-to-one functions are there from a set with five elements to sets with the following number of elements?
+	
+	\textbf{a. 4}
+	
+	\textbf{b. 5}
+	
+	\textbf{c. 6}
+	
+	\textbf{d. 7}
+	
+	
+\end{document}
