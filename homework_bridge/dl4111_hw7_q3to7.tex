@@ -112,98 +112,218 @@
 	\vspace{10mm}
 	\textbf{2. Solve Exercise 8.3.5, sections a-e from the Discrete Math zyBook}
 	
+	\textbf{a.} The algorithm rearranges the sequence of numbers so that the numbers are separated to each side of the sequence depending on whether the number $<$ p or is $\geq$ p.
+	
+	\vspace{10mm}
+	\textbf{b.}
+	For a sequence of length n, the total number of times for the execution is (n-1). The answer just depends on the length of the sequence. The input that minimizes the execution time is when n=1. In this case, the execution time is 0. The input that maximizes the execution time is when n=infinity. In this case, the execution is (infinity-1), which can be seen as infinity.
+	
+	\vspace{10mm}
+	\textbf{c.}
+	The total number of time that the swap operation is operated depends on the actual values of the numbers in the sequence. The input that maximize the swap operation execution times is when all the numbers $\geq$ p are listed before the numbers $<$ p . Then the swap operation would be executed for $\lfloor n/2\rfloor$ times if the sequence length is n. There are 3 kinds of input that would minimize the swap operation execution time: when all the inputs are $<$ p, when all the inputs are $\geq$ p, when all the numbers $<$ p are listed before the numbers $\geq$ p. In these cases, the swap operation would be executed 0 time. 
+	
+	\vspace{10mm}
+	\textbf{d.}
+	The lower bound would be: f(n)=$\Omega (n)$
+	
+	The number of increments or decrements for i or j is $\lfloor n/2\rfloor$. And in the worst case, the swap operation would be executed $\lfloor n/2\rfloor$ times, which means $\Omega (n)$. After taking the worst cases into account, we can conclude that the lower bound would be f(n)=$\Omega (n)$. 
+	
+	\vspace{10mm}
+	\textbf{e.}
+	The upper bound would be: f(n)=${O} (n)$
+	
 	\newpage
 	\section*{Question 4}
 	Solve the following questions from the Discrete Math zyBook:
 	
 	\textbf{1. b}
 	
+	Let D be the set of digits, L the set of letters, and S the set of special characters. The three sets are mutually disjoint, so the total number of characters is
+	
+	$|D\cup L \cup S| = |D| + |L| + |S|$ = 10 + 26 + 4 = 40. 
+	
+	\textbf{Therefore,} the number of passwords of length 7, 8 or 9 is: 
+	
+	$40^7+40^8+40^9$
+	
 	\vspace{10mm}
 	\textbf{1. c}
 	
+	Let D be the set of digits, L the set of letters, and S the set of special characters. The three sets are mutually disjoint, so the total number of characters is
+	
+	$|D\cup L \cup S| = |D| + |L| + |S|$ = 10 + 26 + 4 = 40
+	
+	$|D\cup S| = |D|  + |S|$ = 10 + 4 = 14. 
+	
+	\textbf{Therefore,} when the first letter cannot be letter, the number of passwords change to:
+	
+	$14*(40^6+40^7+40^8)$
+	
 	\vspace{10mm}
 	\textbf{2. a}
+	
+	Total number of strings would be: $3*2^9$
+	
+	This is because the first position can be filled by 3 options and the rest of the 9 positions can only be filled by 2 options.
 	
 	\vspace{10mm}
 	\textbf{3. b}
 	
+	The number would be: $10*26^4*9*8$
+	
+	This is because the next time to fill the digit position, we would have 1 less choice.
+	
 	\vspace{10mm}
 	\textbf{3. c}
 	
+	The number would be: $10*26*25*24*23*9*8$
+	
+	This is because the next to fill the digit or letter position, we would have 1 less choice.
+	
 	\vspace{10mm}
 	\textbf{4. a}
+	\begin{equation*}
+    f(x) = 
+    \begin{cases}
+    x + 0, \text{ if } x\in E_9\\
+    x + 1, \text{ otherwise }
+    \end{cases}
+    \end{equation*}
+    
+    The function is bijection since it is both one-to-one and onto according to the diagram shown below:
 	
-	\vspace{10mm}
+	\vspace{80mm}
 	\textbf{4. b}
 	
+	$|E_{10}| = 2^3 = 8$
+	
+	This is because we have a bijection.
 	\newpage
 	\section*{Question 5}
 	Solve the following questions from the Discrete Math zyBook:
 	
-	\textbf{1. a}
+	\textbf{1. a.}
+	$2*10^4$
 	
-	
-	\vspace{10mm}
-	\textbf{1. b}
-	
-	\vspace{10mm}
-	\textbf{2. a}
+	This is because there are 10 digits and 2 options for starting digits.
 	
 	\vspace{10mm}
-	\textbf{2. b}
+	\textbf{1. b.}
+	$10*9*8*7*2$
+	
+	This is because there are 10 digits and the endings are different digits.
 	
 	\vspace{10mm}
-	\textbf{2. c}
+	\textbf{2. a.}
+	$2^{10}$
+	
+	This is because we have options of 0 and 1 and there are 10 positions.
 	
 	\vspace{10mm}
-	\textbf{2. d}
+	\textbf{2. b.}
+	$2^7$
+	
+	This is because we have 7 positions left.
 	
 	\vspace{10mm}
-	\textbf{2. e}
+	\textbf{2. c.}
+	$2^7+2^8$
+	
+	This is because we have 7 positions or 8 positions left.
 	
 	\vspace{10mm}
-	\textbf{2. f}
+	\textbf{2. d.}
+	$2^8$
+	
+	This is because we have 8 positions left.
 	
 	\vspace{10mm}
-	\textbf{2. g}
+	\textbf{2. e.}
+	C(10,6)
 	
+	This is because we have to choose 6 positions from 10 positions.
+	
+	\vspace{10mm}
+	\textbf{2. f.}
+	C(9,6)
+	
+	This is because we have to choose 6 positions from 9 positions.
+	
+	\vspace{10mm}
+	\textbf{2. g.}
+	C(5,1) * C(5,3)
+	
+	This is because we have to choose 1 from first half and 1 from the second half.
 	
 	\vspace{10mm}
 	\textbf{3. a}
+	C(35,10) * C(30,10)
+	
+	This is because we want to select 10 from boys and 10 from girls.
 	
 	\vspace{10mm}
-	\textbf{4. c}
+	\textbf{4. c.}
+	C(26,5)
+	
+	Because there are 26 cards in total with patterns of hearts and diamonds.
 	
 	\vspace{10mm}
-	\textbf{4. d}
+	\textbf{4. d.}
+	C(13,1)*C(4,4)*C(48,1)
+	
+	There are 13 kinds of different ranks. Each rank would have 4 kinds of patterns. We want to select all these cards of the same rank and 1 other card from the rest of the 48 cards.
 	
 	\vspace{10mm}
-	\textbf{4. e}
+	\textbf{4. e.}
+	C(13,1)*C(4,2)*C(12,1)*C(4,3)
+	
+	There are 13 kinds of different ranks. Each rank would have 4 kinds of patterns. We want to select 2 from the 4 patterns of same rank and then 3 from the 4 patterns of the other rank.
 	
 	\vspace{10mm}
-	\textbf{4. f}
+	\textbf{4. f.}
+	C(13,5)*$4^5$
+	
+	There are 13 kinds of different ranks. Each rank would have 4 kinds of patterns. We select 5 out of 13 different ranks and the patterns are of no restrictions for the 5 cards.
 	
 	\vspace{10mm}
-	\textbf{5. a}
+	\textbf{5. a.}
+	C(44,5)*C(56,5)
+	
+	If we want to same number of both parties, we have to choose 5 from each party.
 	
 	\vspace{10mm}
-	\textbf{5. b}
+	\textbf{5. b.}
+	44*43*56*55
+	
+	For both parties, after choosing 1 for the speaker, we would have 1 less choice for the vice speaker.
 
 	
 	\newpage
 	\section*{Question 6}
 	Solve the following questions from the Discrete Math zyBook:
 	
-	\textbf{1. a}
+	\textbf{1. a.}
+	C(52,5)-C(39,5)
+	
+	We should try to remove the incidents where there are no club at all from the total incidents. No club at all means we should select 5 cards from the 39 cards.
 	
 	\vspace{10mm}
-	\textbf{1. b}
+	\textbf{1. b.}
+	C(52,5)-C(13,5)*$4^5$
+	
+	We should remove the incidents where there are no cards with the same rank from the total incidents. No cards with the same rank means we select 5 ranks from the 13 ranks in total, and each card has the all 4 options in terms of the patterns.
 	
 	\vspace{10mm}
-	\textbf{2. a}
+	\textbf{2. a.}
+	$5^{20}$
+	
+	The first book can be distributed either one of the 5 kids. For each of the 20 books, it has 5 choices of kids to go to. 
 	
 	\vspace{10mm}
-	\textbf{2. b}
+	\textbf{2. b.}
+	$20!/(4!*4!*4!*4!*4!)$
+	
+	There are 5 kids and each kid has 4 repeated books.
 	
 	\newpage
 	\section*{Question 7}
@@ -211,11 +331,18 @@
 	
 	\textbf{a. 4}
 	
+	There are 0 one-to-one functions since it is inevitable for one element from domain get mapped to the same target with one other element inside the domain.
+	
 	\textbf{b. 5}
+	
+	There is 5*4*3*2*1 = 120 one-to-one functions in this case. The number of available elements in the target would be 1 less after the element in the domain picked one.
 	
 	\textbf{c. 6}
 	
+	There are 6*5*4*3*2 = 720 one-to-one functions in this case. The number of available elements in the target would be 1 less after the element in the domain picked one.
+	
 	\textbf{d. 7}
 	
+	There are 7*6*5*4*3 = 2520 one-to-one functions in this case. The number of available elements in the target would be 1 less after the element in the domain picked one.
 	
 \end{document}
