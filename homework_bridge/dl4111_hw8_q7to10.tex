@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{url}
+\usepackage[demo]{graphicx}
+\usepackage{caption} 
+\usepackage{algpseudocode}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{amsthm}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+\DeclareMathOperator*{\R}{\mathbb{E}}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\newcommand{\homework}[2]{
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{
+				\hbox to 6.50in { {\bf NYU Computer Science Bridge to Tandon Course} \hfill Winter 2021 }
+				\vspace{4mm}
+				\hbox to 6.50in { {\Large \hfill Homework 8  \hfill} }
+				\vspace{2mm}
+				\hbox to 6.50in { {Name: Danrong Li \hfill} NetID: dl4111}
+
+			}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+
+\begin{document}
+	
+	\homework{1}{Danrong Li}
+	\section*{Question 7}
+	
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. Exercise 6.1.5, section b-d}
+	
+	\textbf{b.}
+	In three of a kind, 3 cards in the same rank and the other 2 cards has different ranks from the 3 cards and from each other. This means, the 3 cards can be chosen from 13 choices and the 2 cards would be to choose 2 from the remaining. In addition that there are 4 suits in a deck and the total number of options is to choose 5 from the 52 cards, we have the final answer:
+	
+    \textbf{13 * C(12,2) * C(4,3) * C(4,1) * C(4.1) / C(52,5)}
+	
+	\vspace{10mm}
+	\textbf{c. }
+	There are a total of 4 suits in a deck of card, and there are C(13,5) ways to choose 5 from 13 cards. In addition that the total number of options is to choose 5 from the 52 cards, we have the final answer:
+	
+	\textbf{C(4,1) * C(13,5) / C(52,5)}
+	
+	\vspace{10mm}
+	\textbf{d.}
+	In two of a kind, 2 cards have the same rank and the other 3 cards have different ranks from the 2 cards and from each other. In other words, the 2 cards can have 13 choices of ranks and the 3 cards can choose 3 from the 12 choices. n addition that there are 4 suits in a deck and the total number of options is to choose 5 from the 52 cards, we have the final answer:
+	
+	\textbf{13 * C(12,3) * C(4,2) * C(4,1) * C(4,1) * C(4,1) / C(52,5)}
+	
+	\vspace{10mm}
+	\textbf{2. Exercise 6.2.4, sections a-d}
+	
+	\textbf{a.} 
+	The probability of having at least one club is 1 - P(not have club). Excluding club, we have (52-13=) 39 cards. Thus we have the final answer:
+	
+	\textbf{1 - (C(39,5) / C(52,5))}
+	
+	\vspace{10mm}
+	\textbf{b.}
+	P(at least 2 cards with same rank) = 1 - P(no cards with same rank). We would first 5 ranks from 13 ranks and each rank has 4 choices in suit. 
+	
+	\textbf{Thus the final answer is:}
+	$1-(((C(13,5))*((C(4,1))^5))/(C(52,5)))$
+	
+	\vspace{10mm}
+	\textbf{c.}
+	P(exactly 1 club or exactly 1 spade) = P(exactly 1 club) + P(exactly 1 spade) - P(exactly 1 club and exactly 1 spade). P(exactly 1 club) = P(exactly 1 spade) = choose 4 from (52-13=) 19 cards and the club could be from 13 choices. Similarly for both 1 club and 1 spade. Thus the final answer is:
+	
+	\textbf{(C(39,4) * 13 * 2 - C(26,3) * 13 * 13) / C(52,5)}
+
+	
+	\vspace{10mm}
+	\textbf{d.}
+	P(at least 2 clubs or at least 1 spade) = 1 - P(no club and no spade), thus the final answer is:
+	
+	\textbf{1 - C(26,5)/C(52,5)}
+	
+	\newpage
+	\section*{Question 8}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. Exercise 6.3.2, sections a-e}
+	
+	\textbf{a.}
+	
+	
+	\vspace{10mm}
+	\textbf{b.}
+	
+
+	
+	\vspace{10mm}
+	\textbf{c.}
+	
+	
+	
+	\vspace{10mm}
+	\textbf{d.}
+
+	
+	\vspace{10mm}
+	\textbf{e.}
+	
+	
+	
+	\vspace{10mm}
+	\textbf{2. Exercise 6.3.6, sections b,c}
+	
+	\textbf{b.}
+	
+	
+	\vspace{10mm}
+	\textbf{c.}
+	
+	\vspace{10mm}
+	\textbf{3. Exercise 6.4.2, section a}
+	
+	\textbf{a.}
+
+	\newpage
+	\section*{Question 9}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. a.}
+	
+	
+	\vspace{10mm}
+	\textbf{1. b.}
+	
+	
+	\vspace{10mm}
+	\textbf{2. a.}
+	
+	
+	\vspace{10mm}
+	\textbf{3. a.}
+	
+	\vspace{10mm}
+	\textbf{3. b.}
+	
+	\vspace{10mm}
+	\textbf{4. a.}
+
+	
+	\newpage
+	\section*{Question 10}
+	Solve the following questions from the Discrete Math zyBook:
+	
+	\textbf{1. a.}
+
+	\vspace{10mm}
+	\textbf{1. b.}
+	
+	\vspace{10mm}
+	\textbf{1. c.}
+	
+	\vspace{10mm}
+	\textbf{1. d.}
+	
+	
+	\vspace{10mm}
+	\textbf{2. b.}
+	
+	
+\end{document}
