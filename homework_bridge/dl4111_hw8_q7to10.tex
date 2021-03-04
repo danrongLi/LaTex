@@ -115,63 +115,104 @@
 	
 	\textbf{a.}
 	
+	P(A) = P(b in the middle) = 6!/7! \textbf{= 1/7}
+	
+	P(B) = (6!+5*5!+5*4*4!+5*4*3*3!+5*4*3*2*2!+5*4*3*2*1)/(7!) \textbf{= 1/2}
+	
+	P(C) = P(def together) = 5!/7! \textbf{= 1/42}
 	
 	\vspace{10mm}
 	\textbf{b.}
-	
+	$P(A|C)=P(A\cap C)/P(C)=|A\cap C|/|C|$ = 3!*2/(5!) \textbf{= 1/10}
 
 	
 	\vspace{10mm}
 	\textbf{c.}
+	$P(B|C)=P(B\cap C)/P(C)=|B\cap C|/|C|$ = 5!/2/(5!) \textbf{=1/2}
 	
+	This is because for every way to permute the letters with c being the right of b, there is exactly one way to permute with c being left of b. Then in exactly  half of the permutations, c being on the right of b.
 	
 	
 	\vspace{10mm}
 	\textbf{d.}
+	$P(A|B)=P(A\cap B)/P(B)=|A\cap B|/|B$ = 6!/2/(7!/2) \textbf{= 1/7}
 
+	The reasoning is similar to previous question.
 	
 	\vspace{10mm}
 	\textbf{e.}
 	
+	P(A|B) = 1/7 = P(A)
 	
+	P(B|C) = 1/2 = P(B)
 	
+	P(A|C) = 1/10 != P(A)
+	
+	\textbf{Thus, A and B are independent; B and C are independent}
+	
+
 	\vspace{10mm}
 	\textbf{2. Exercise 6.3.6, sections b,c}
 	
 	\textbf{b.}
 	
+	P(fist 5 H, last 5 T) = $(1/3)^5*(2/3)^5$
 	
-	\vspace{10mm}
+	\vspace{5mm}
 	\textbf{c.}
+	
+	P(fist H, rest T) = $(1/3)*(2/3)^9$
 	
 	\vspace{10mm}
 	\textbf{3. Exercise 6.4.2, section a}
 	
 	\textbf{a.}
+	
+	P(Fair) = P(Biased) = 1/2
+	
+	P(Observation | Fair) = $(1/6)^6$
+	
+	P(Observation | Biased) = $0.15^4*0.25^2$
+	
+	\textbf{Thus, with Bayes' theorem:}
+	
+	P(Fair | Observation) = $(1/6)^6/2/((1/6)^6/2+0.15^4*0.25^2/2)$ \textbf{= 0.4038}
 
 	\newpage
 	\section*{Question 9}
 	Solve the following questions from the Discrete Math zyBook:
 	
 	\textbf{1. a.}
-	
+	\textbf{\{0,1,2,3,4\}}
 	
 	\vspace{10mm}
 	\textbf{1. b.}
 	
+	(0, C(48,5)/C(52,5)), (1, 4*C(48,4)/C(52,5), (2, C(4,2)*C(48,3)/C(52,5)), (3, C(4,3)*C(48,2)/C(52,5)), (4, C(4,4)*C(48,1)/C(52,5)))
 	
 	\vspace{10mm}
 	\textbf{2. a.}
 	
+	E[G] = 0 * C(3,2)/C(10,2) + 1 * C(7,1)*C(3,1)/C(10,2) + 2 * C(7,2)/C(10,2) \textbf{= 1.4}
 	
 	\vspace{10mm}
 	\textbf{3. a.}
 	
+	E[X] = (0+1+4+9+16+25+36)/6 \textbf{= 91/6 = 15.17}
+	
 	\vspace{10mm}
 	\textbf{3. b.}
 	
+	E[Y] = 0*1/8+1*3/8+4*3/8+9*1/8 \textbf{= 3}
+	
 	\vspace{10mm}
 	\textbf{4. a.}
+	
+	E[S] = $E[S_1+S_2+...+S_{10}]=E[S_1]+E{S_2}+...+E[S_{10}]=10*E[S_1]$
+	
+	$E[S_1]=$1/10*1+9/10*0=1/10
+	
+	Thus, E[S] = 10*1/10 \textbf{= 1}
 
 	
 	\newpage
@@ -179,19 +220,34 @@
 	Solve the following questions from the Discrete Math zyBook:
 	
 	\textbf{1. a.}
+	
+	P(2 out of 100 have defects) = $C(100,2)*(0.01)^2*0.99^{98}$ \textbf{= 0.185}
+	
 
 	\vspace{10mm}
 	\textbf{1. b.}
 	
+	P(at least 2 out 100 have defects) = $1-(C(100,0)*0.99^{100}+100/100*0.99^{99})$ \textbf{= 0.264}
+	
 	\vspace{10mm}
 	\textbf{1. c.}
+	
+	E[D] = n*p = 100*0.01 \textbf{= 1}
 	
 	\vspace{10mm}
 	\textbf{1. d.}
 	
+	P(at least 2 boards with Defect) = P(at least 1 batch with Defect) = 1 - P(no batch with Defect) = $1-C(50,0)*0.01^0*0.99^{50}$ \textbf{= 0.395} $>0.264$
+	
+	E[D] = n*p = 50 * 1/100 * 2 \textbf{= 1}
+	
+	\textbf{Thus, the P(at least 2 boards with Defect) in the batch situation is higher than the probability in the separate situation. And the expected number of circuit boards with Defect is the same in both situations.}
 	
 	\vspace{10mm}
 	\textbf{2. b.}
+	The conclusion of the coin is fair is made when we have at least 4 Heads. P(H $\geq$ 4) = 1 - P(H $<$ 4), thus we have the following equation: 
+	
+	$1-(C(10,0)*0.3^0*0.7^{10}+C(10,1)*0.3*0.7^9+C(10,2)*0.3^2*0.7^8+C(10,3)*0.3^3*0.7^7)$ \textbf{= 0.3504}
 	
 	
 \end{document}
