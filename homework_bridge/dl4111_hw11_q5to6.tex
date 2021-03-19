@@ -1,0 +1,133 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{url}
+\usepackage[demo]{graphicx}
+\usepackage{caption} 
+\usepackage{algpseudocode}
+\usepackage{bbm}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, linkcolor=red, urlcolor=blue, citecolor=blue]{hyperref}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\usepackage{amsthm}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+\DeclareMathOperator*{\R}{\mathbb{E}}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\newcommand{\homework}[2]{
+	\noindent
+	\begin{center}
+		\framebox{
+			\vbox{
+				\hbox to 6.50in { {\bf NYU Computer Science Bridge to Tandon Course} \hfill Winter 2021 }
+				\vspace{4mm}
+				\hbox to 6.50in { {\Large \hfill Homework 11  \hfill} }
+				\vspace{2mm}
+				\hbox to 6.50in { {Name: Danrong Li \hfill} NetID: dl4111}
+
+			}
+		}
+	\end{center}
+	\vspace*{4mm}
+}
+
+\begin{document}
+	
+	\homework{1}{Danrong Li}
+	\section*{Question 5}
+	
+	\textbf{a. }Use mathematical induction to prove that for any positive integer n, 3 divide $n^3+2n$ leaving no remainder.
+	\begin{proof}
+	By induction on n.
+	
+	Base case: n = 1.
+	
+	$(n^3+2n)/3=3/3=1$, 3 divide 3 with no remainder, so the theorem holds for n = 1.
+	
+	Inductive step: Suppose that for positive integer n, 3 divide $n^2n$, then we will show that 3 divide $(n+1)^3+2(n+1)$. By induction hypothesis, 3 divide $n^3+2n$, which means $n^3+2n=3k$ for some integer k, which is equivalent to the induction hypothesis. We must show that $(n+1)^3+2(n+1)$ can be expressed as 3 time some integer.
+	
+	$(n+1)^3+2(n+1)$ = $n^2+3n^2+3n+1+2n+2$ Expand with the equation provided by the question
+	
+	\hspace{33.6mm}= $3k+3n^2+3n+3$ \hspace{10mm}Inductive Hypothesis $n^3+2n=3k$
+	                 
+	\hspace{33.6mm}= $3*(k+n^2+n+1)$ \hspace{7.5mm}By algebra
+	                 
+	k and n are both integers, so $(k+n^2+n+1)$ is also an integer. We can express $(n+1)^3+2(n+1)$ as 3 times an integer, which means that 3 divide $(n+1)^3+2(n+1)$. For any positive integer n, 3 divide $n^3+2n$ leaving no remainder.
+	\end{proof}
+	
+	\vspace{10mm}
+	\textbf{b. }Use strong induction to prove that any positive integer n $(n\geq 2)$ can be written as a product of primes.
+	
+	\begin{proof}
+	By strong induction on n.
+	
+	Base case: n = 2.
+	
+	n = 1 * 2, 1 and 2 are both prime numbers, so the theorem holds in the base case.
+	
+	Inductive step: Suppose that for any integer n, range from 2 to n, the integer can be expressed as a product of primes. Then we will show that n+1 can be expressed as a product of primes. 
+	
+	If n+1 is prime number, then n+1 = 1 * (n+1), where 1 and n+1 are both prime numbers. Thus, the theorem hold true in this case.
+	
+	If n+1 is not prime number, then n+1 can be expressed as the product of 2 integers a, b, where a and b are both greater than or equal to 2. n+1 = a*b, a$\geq 2$, b$\geq 2$. n+1 = a*b, means a = (n+1)/b, since b $\geq 2$, we get (n+1)/b $<$ n+1, which means a $<$ n+1. With a being strictly less than n-1, we know that a$\leq$ n. In addition, we know that a$\leq$ n with the similar logic as shown above. Then, we have $2\leq a\leq n$, $2\leq b\leq n$. a and b both fall in the induction hypothesis criteria, so that they can be expresses as products of prime numbers. Since n+1 = a*b and we know that a and b can both be expressed as product of prime numbers, n+1 can also be expresses as product of prime numbers. 
+	
+	Thus, in the case where n+1 is prime number or the case where n+1 is not prime number, n+1 can be expressed as products of primes. Any positive integer n $(n\geq 2)$ can be written as a product of primes.
+	
+	\end{proof}
+	
+	\newpage
+	\section*{Question 6}
+	
+	Solve the following questions from the Discrete Math Zybook:
+	
+	\textbf{1. }Exercise 7.4.1, sections a-g
+	
+	\textbf{a.}
+	
+	\textbf{b.}
+	
+	\textbf{c.}
+	
+	\textbf{d.}
+	
+	\textbf{e.}
+	
+	\textbf{f.}
+	
+	\textbf{g.}
+	
+	\vspace{20mm}
+	\textbf{2. }Exercise 7.4.3, section c
+	
+	\textbf{c.}
+	
+	\vspace{20mm}
+	\textbf{3.} Exercise 7.5.1, section a
+	
+	\textbf{a.}
+
+	
+	
+\end{document}
