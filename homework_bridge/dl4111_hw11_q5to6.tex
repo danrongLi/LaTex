@@ -105,23 +105,76 @@
 	\textbf{1. }Exercise 7.4.1, sections a-g
 	
 	\textbf{a.}
+	P(3) is true.
+	
+	$\sum_{j=1}^{3} j^2=1^2+2^2+3^2=1+4+9=14$
+	
+	$3*(3+1)*(2*3+1)/6=3*4*7/6=14$
+	
+	Thus, we verified P(3) is true.
 	
 	\textbf{b.}
+	P(k)
+	
+	$\sum_{j=1}^{k} j^2=(k*(k+1)*(2k+1))/6$
 	
 	\textbf{c.}
+	P(k+1)
+	
+	$\sum_{j=1}^{k+1} j^2=((k+1)*(k+1+1)*(2*(k+1)+1))/6$
 	
 	\textbf{d.}
+	Base case, n = 1
+	
+	$\sum_{j=1}^{1} j^2=1$
+	
+	1*(1+1)*(2+1)/6 = 1
+	
+	so the theorem holds for the base case, n = 1
 	
 	\textbf{e.}
+	inductive step to prove
+	
+	$\sum_{j=1}^{k+1} j^2=((k+1)*(k+1+1)*(2*(k+1)+1))/6$
 	
 	\textbf{f.}
+	inductive hypothesis
+	
+	$\sum_{j=1}^{k} j^2=(k*(k+1)*(2k+1))/6$
 	
 	\textbf{g.}
+	The entire proof is shown below:
+	\begin{proof}
+	By induction on n.
+	
+	Base case: n = 1.
+	
+	$\sum_{j=1}^{1} j^2=1$
+	
+	1*(1+1)*(2+1)/6 = 1
+	
+	so the theorem holds for the base case, n = 1
+	
+	Inductive step: Suppose that for any positive integer k, $\sum_{j=1}^{k} j^2=(k*(k+1)*(2k+1))/6$, then we will show that $\sum_{j=1}^{k+1} j^2=((k+1)*(k+1+1)*(2*(k+1)+1))/6$. If we simplify this equation we get $\sum_{j=1}^{k+1} j^2=((k+1)(k+2)(2k+3))/6$, which is the induction hypothesis in the equivalent form.
+	
+	$\sum_{j=1}^{k+1} j^2=\sum_{j=1}^{k}+(k+1)^2$ Separate the last term
+
+\hspace{13.5mm}	= $k(k+1)(2k+1)/6+(k+1)^2$ Induction Hypothesis
+
+\hspace{13.5mm}	= $k(k+1)(2k+1)+6(k^2+1+2k)/6$ By algebra
+
+\hspace{13.5mm}	= $(k+1)(k+2)(2k+3)/6$ By algebra
+
+    Thus, we are able to show $\sum_{j=1}^{k+1} j^2=((k+1)(k+2)(2k+3))/6$. For any positive integer n, $\sum_{j=1}^{n} j^2=(n*(n+1)*(2n+1))/6$ 
+	
+	\end{proof}
 	
 	\vspace{20mm}
 	\textbf{2. }Exercise 7.4.3, section c
 	
 	\textbf{c.}
+	
+	
 	
 	\vspace{20mm}
 	\textbf{3.} Exercise 7.5.1, section a
